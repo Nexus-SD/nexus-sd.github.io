@@ -243,8 +243,103 @@ button:hover, button:hover::before {
   100% { background-position: 200%; }
 }
 
-@media screen and (max-width: 1000px) {
-  :root {
-    --m: 2rem;
-  }
+.menu-toggle {
+    display: none;
+}
+
+@media (min-width: 1000px) {
+    body {
+        margin: auto 200px;
+    }
+
+    footer {
+        margin: 0px -200px;
+    }
+}
+
+/* Menu toggle para telas menores */
+@media screen and (max-width: 768px) {
+    :root {
+        --m: 1rem;
+      }
+
+    body {
+        margin: auto 20px;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: -200px;
+        background-color: #17212D;
+        width: 200px;
+        transition: right 0.3s ease;
+        display: none;
+    }
+
+    header nav ul.menu-open {
+        border-radius: 20px;
+        display: block;
+        right: 20px;
+    }
+
+    .menu-toggle {
+        margin-right: -20%;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .cta {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    #hero h2 {
+        font-size: 36px;
+    }
+
+    #hero img{
+        width: 100%;
+    }
+
+    #hero {
+        display: block;
+        align-items: center;
+        padding: 50px 20px;
+    }
+    
+    #hero .hero-content {
+        max-width: 100%;
+    }
+
+    .services {
+        display: block;
+        justify-content: space-between;
+    }
+
+    #servicos h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .service-item {
+        margin-bottom: 50px;
+    }
+
+    footer {
+        margin: 0px -20px;
+    }
+
+    #objetivo p {
+        font-size: 16px;
+        color: #ccc;
+        margin-bottom: 20px;
+    }
 }

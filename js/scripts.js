@@ -14,3 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
         heroLogo.style.setProperty('--y', '0deg');
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("nav ul");
+
+    menuToggle.addEventListener("click", function() {
+        menu.classList.toggle("menu-open");
+    });
+});
